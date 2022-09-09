@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #212121;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50%;
+  padding: 4vw;
+  width: 24vw;
+  height: 24vw;
+  color: white;
+  transition: 1s ease;
+  &.cold {
+    box-shadow: #0096ff 0px 0px 10px 10px;
+  }
+  &.hot {
+    box-shadow: orangered 0px 0px 10px 10px;
+  }
+
+  .temperature-display {
+    font-size: 5vw;
+    font-weight: 700;
+  }
+
+  .set-buttons {
+    button {
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 5vw;
+      height: 5vw;
+      color: white;
+      font-size: 2vw;
+      margin: 1vw;
+      cursor: pointer;
+      transition: 0.5s ease;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .temperature {
+    width: 70vw;
+    height: 70vw;
+    padding: 4vw;
+    .temperature-display {
+      font-size: 14vw;
+    }
+    .set-buttons {
+      button {
+        width: 14vw;
+        height: 14vw;
+        font-size: 4.5vw;
+        margin: 3vw;
+      }
+    }
+  }
+}
